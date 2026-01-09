@@ -6,52 +6,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #ffffff;
-      scroll-behavior: smooth;
     }
 
+    /* NAVIGATION */
+    nav {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 18px;
+    }
+
+    nav a {
+      color: #00c6ff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* CONTAINERS */
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 100px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
+    .hero {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+
     h1 {
-      font-size: 44px;
+      font-size: 42px;
       margin-bottom: 10px;
     }
 
     h2 {
-      margin-top: 80px;
       font-size: 30px;
+      margin-bottom: 20px;
       border-bottom: 2px solid rgba(255,255,255,0.2);
+      display: inline-block;
       padding-bottom: 8px;
     }
 
     p {
       font-size: 18px;
-      line-height: 1.7;
+      line-height: 1.6;
       color: #e0e0e0;
     }
 
-    .nav {
-      margin-top: 20px;
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 18px;
     }
 
-    .nav a {
-      color: #00c6ff;
-      margin: 0 14px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .nav a:hover {
-      text-decoration: underline;
+    ul li {
+      margin: 10px 0;
     }
 
     .button {
@@ -68,26 +91,33 @@
     .button:hover {
       background: #4dd2ff;
     }
+
+    footer {
+      padding: 40px 10px;
+      font-size: 14px;
+      color: #b0b0b0;
+      text-align: center;
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO / HOME -->
-  <div class="container" id="home">
+  <!-- HERO -->
+  <div class="container hero" id="home">
     <h1>🚀 Jashmine</h1>
     <p>IT • Digital Operations • Thought Leadership</p>
-
-    <!-- Navigation (NOT headings) -->
-    <div class="nav">
-      <a href="#about">About</a> |
-      <a href="#work">What I Do</a> |
-      <a href="#contact">Contact</a> |
-      <a href="https://www.linkedin.com/in/jashminep/" target="_blank">LinkedIn</a>
-    </div>
   </div>
 
-  <!-- ABOUT ME (ONLY ONCE) -->
+  <!-- NAV -->
+  <nav>
+    <a href="#about">About Me</a> |
+    <a href="#work">What I Do</a> |
+    <a href="#contact">Contact</a> |
+    <a href="https://www.linkedin.com/in/jashminep/" target="_blank">LinkedIn</a>
+  </nav>
+
+  <!-- ABOUT -->
   <div class="container" id="about">
     <h2>About Me</h2>
     <p>
@@ -100,29 +130,31 @@
   <!-- WHAT I DO -->
   <div class="container" id="work">
     <h2>What I Do</h2>
-    <p>
-      • IT Service & Digital Operations<br />
-      • Problem Management & Process Improvement<br />
-      • Salesforce, ITSM & Governance Support<br />
-      • Thought leadership through real-world case studies
-    </p>
+    <ul>
+      <li>• IT Service & Digital Operations</li>
+      <li>• Problem Management & Process Improvement</li>
+      <li>• Salesforce, ITSM & Governance Support</li>
+      <li>• Thought leadership through real-world case studies</li>
+    </ul>
   </div>
 
   <!-- CONTACT -->
   <div class="container" id="contact">
     <h2>Contact</h2>
-    <p>
-      I share insights, learnings, and practical experiences regularly on LinkedIn.
-    </p>
+    <p>I share insights and practical learnings regularly on LinkedIn.</p>
 
     <a class="button" href="https://www.linkedin.com/in/jashminep/" target="_blank">
       Connect on LinkedIn
     </a>
 
-    <p style="margin-top:40px;">
+    <p style="margin-top:30px;">
       📧 <strong>contact@jashmine.in</strong>
     </p>
   </div>
+
+  <footer>
+    © 2026 Jashmine • Built with GitHub Pages
+  </footer>
 
 </body>
 </html>
