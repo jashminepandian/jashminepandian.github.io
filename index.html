@@ -4,35 +4,125 @@
   <meta charset="UTF-8" />
   <title>Jashmine | IT & Digital Operations</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 100px 20px;
       text-align: center;
     }
-    a {
+
+    h1 {
+      font-size: 44px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 80px;
+      font-size: 28px;
+      border-bottom: 2px solid rgba(255,255,255,0.2);
+      padding-bottom: 8px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #e0e0e0;
+    }
+
+    .nav {
+      margin-top: 20px;
+    }
+
+    .nav a {
       color: #00c6ff;
-      font-weight: bold;
+      margin: 0 14px;
       text-decoration: none;
-      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 26px;
+      background: #00c6ff;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    .button:hover {
+      background: #4dd2ff;
     }
   </style>
 </head>
+
 <body>
 
-  <div>
+  <!-- HERO / HOME -->
+  <div class="container" id="home">
     <h1>🚀 Jashmine</h1>
     <p>IT • Digital Operations • Thought Leadership</p>
 
-    <p>
-      <a href="about.html">About Me</a> |
+    <div class="nav">
+      <a href="#about">About Me</a>
+      |
+      <a href="#work">What I Do</a>
+      |
+      <a href="#contact">Contact</a>
+      |
       <a href="https://www.linkedin.com/in/jashminep/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- ABOUT ME -->
+  <div class="container" id="about">
+    <h2>About Me</h2>
+    <p>
+      I work at the intersection of technology, digital operations, and problem management.
+      My focus is on simplifying complex systems, improving service reliability,
+      and enabling teams to work smarter through structured processes and modern tools.
+    </p>
+  </div>
+
+  <!-- WHAT I DO -->
+  <div class="container" id="work">
+    <h2>What I Do</h2>
+    <p>
+      • IT Service & Digital Operations<br />
+      • Problem Management & Process Improvement<br />
+      • Salesforce, ITSM & Governance Support<br />
+      • Thought leadership through real-world case studies
+    </p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="container" id="contact">
+    <h2>Contact</h2>
+    <p>
+      I share insights, learnings, and practical experiences regularly on LinkedIn.
+    </p>
+
+    <a class="button" href="https://www.linkedin.com/in/jashminep/" target="_blank">
+      Connect on LinkedIn
+    </a>
+
+    <p style="margin-top:40px;">
+      📧 <strong>contact@jashmine.in</strong>
     </p>
   </div>
 
