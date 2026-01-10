@@ -1,250 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Jashmine | IT & Digital Operations</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>Jashmine | Digital Operations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #0e1f26;
-      --bg-soft: #142c35;
-      --accent: #00c6ff;
-      --text-main: #ffffff;
-      --text-muted: #b7c7cf;
-      --divider: rgba(255,255,255,0.12);
-    }
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #FFF4CC;
+  color: #1E1E1E;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+/* Layout */
+.page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 30px;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+}
 
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: linear-gradient(180deg, var(--bg), var(--bg-soft));
-      color: var(--text-main);
-      line-height: 1.7;
-    }
+/* Big background text */
+.hero::before {
+  content: "JASHMINE";
+  position: absolute;
+  left: -40px;
+  top: 40%;
+  font-size: 140px;
+  font-weight: 700;
+  color: rgba(0,0,0,0.05);
+  letter-spacing: 10px;
+}
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 500;
-    }
+/* Image block */
+.image-box {
+  background: #F3D4AC;
+  padding: 40px;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+.image-box img {
+  width: 100%;
+  display: block;
+  filter: grayscale(100%);
+}
 
-    /* Layout */
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 80px 24px;
-    }
+/* Text block */
+.text-box h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
 
-    section {
-      margin-bottom: 80px;
-    }
+.text-box p {
+  font-size: 17px;
+  color: #5F6B6F;
+  line-height: 1.7;
+}
 
-    .divider {
-      height: 1px;
-      background: var(--divider);
-      margin: 48px 0;
-    }
+.links {
+  margin-top: 30px;
+}
 
-    /* Header / Hero */
-    header {
-      text-align: center;
-      padding-top: 120px;
-      padding-bottom: 100px;
-    }
+.links a {
+  margin-right: 20px;
+  font-weight: 600;
+  color: #0E2A32;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
 
-    header h1 {
-      font-size: 48px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
+.links a:hover {
+  border-color: #0E2A32;
+}
 
-    header p {
-      font-size: 18px;
-      color: var(--text-muted);
-      max-width: 700px;
-      margin: auto;
-    }
+/* Sections */
+.section {
+  margin-top: 120px;
+  background: #0E2A32;
+  color: white;
+  padding: 80px 40px;
+}
 
-    nav {
-      margin-top: 28px;
-      font-size: 15px;
-    }
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
 
-    nav a {
-      margin: 0 12px;
-    }
+.section p {
+  max-width: 700px;
+  color: #C8D6DC;
+  font-size: 17px;
+}
 
-    /* Section Titles */
-    h2 {
-      font-size: 30px;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #5F6B6F;
+  font-size: 14px;
+}
 
-    p {
-      font-size: 17px;
-      color: var(--text-muted);
-      max-width: 800px;
-    }
-
-    /* What I Do list */
-    ul {
-      list-style: none;
-      margin-top: 20px;
-    }
-
-    ul li {
-      margin-bottom: 12px;
-      padding-left: 20px;
-      position: relative;
-      color: var(--text-muted);
-      font-size: 17px;
-    }
-
-    ul li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: bold;
-    }
-
-    /* Contact */
-    .contact-box {
-      background: rgba(255,255,255,0.03);
-      padding: 32px;
-      border-radius: 10px;
-      margin-top: 24px;
-    }
-
-    .contact-box p {
-      margin-bottom: 12px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 12px 26px;
-      border-radius: 6px;
-      background: var(--accent);
-      color: #00131a;
-      font-weight: 600;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 14px;
-      color: var(--text-muted);
-      border-top: 1px solid var(--divider);
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 36px;
-      }
-
-      h2 {
-        font-size: 26px;
-      }
-    }
-  </style>
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero::before {
+    display: none;
+  }
+}
+</style>
 </head>
 
 <body>
 
+<div class="page">
+
   <!-- HERO -->
-  <header>
-    <h1>Jashmine</h1>
-    <p>
-      IT • Digital Operations • Thought Leadership  
-      <br />Driving clarity, resilience, and impact across complex systems
-    </p>
+  <section class="hero">
+    <div class="image-box">
+      <!-- Replace image later -->
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Portrait">
+    </div>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#work">What I Do</a>
-      <a href="#contact">Contact</a>
-      <a href="https://www.linkedin.com/in/jashminep/" target="_blank">LinkedIn</a>
-    </nav>
-  </header>
-
-  <main class="container">
-
-    <!-- ABOUT -->
-    <section id="about">
-      <h2>About Me</h2>
+    <div class="text-box">
+      <h1>Breathing clarity into complex systems.</h1>
       <p>
-        I work at the intersection of technology, digital operations, and problem management.
-        My focus is on simplifying complex systems, improving service reliability,
-        and enabling teams to operate with confidence through structured processes
-        and modern tools.
+        I work at the intersection of IT, digital operations, and problem management —
+        helping teams reduce chaos, increase reliability, and lead with confidence.
       </p>
-    </section>
 
-    <div class="divider"></div>
-
-    <!-- WHAT I DO -->
-    <section id="work">
-      <h2>What I Do</h2>
-      <ul>
-        <li>IT Service & Digital Operations leadership</li>
-        <li>Problem Management & operational resilience</li>
-        <li>Salesforce, ITSM & governance enablement</li>
-        <li>Thought leadership through real-world insights</li>
-      </ul>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Connect</h2>
-
-      <div class="contact-box">
-        <p>
-          I share insights on IT operations, leadership, and continuous improvement.
-          If my work resonates with you, let’s connect.
-        </p>
-
-        <p>
-          📧 <strong>contact@jashmine.in</strong>
-        </p>
-
-        <a class="btn" href="https://www.linkedin.com/in/jashminep/" target="_blank">
-          Connect on LinkedIn
-        </a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#work">What I Do</a>
+        <a href="https://www.linkedin.com/in/jashminep/" target="_blank">LinkedIn</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>
+      I focus on simplifying operational complexity, strengthening governance,
+      and enabling teams to deliver consistent outcomes through structured processes
+      and modern platforms.
+    </p>
+  </section>
 
-  <footer>
-    © 2026 Jashmine • Built with clarity, not clutter
-  </footer>
+  <!-- WHAT I DO -->
+  <section class="section" id="work">
+    <h2>What I Do</h2>
+    <p>
+      IT & Digital Operations • Problem Management • Salesforce & ITSM •
+      Thought leadership grounded in real-world delivery.
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 Jashmine • Digital Operations & Thought Leadership
+</footer>
 
 </body>
 </html>
