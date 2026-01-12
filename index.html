@@ -11,11 +11,11 @@
 
   <style>
     :root {
-      --bg-dark: #0f2a2e;
-      --bg-light: #14383f;
-      --accent: #6CFF9B;
-      --text-main: #ffffff;
-      --text-muted: #cfe8e6;
+      --bg-main: #ffffff;
+      --bg-soft: #f8fafc;
+      --accent: #22c55e;
+      --text-main: #0f172a;
+      --text-muted: #475569;
       --blue-footer: #1d4ed8;
     }
 
@@ -26,22 +26,24 @@
       font-family: 'Poppins', sans-serif;
     }
 
-  body {
-  background: #f8fafc; /* soft off-white */
-  color: #0f172a;
-}
-
+    body {
+      background: var(--bg-main);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
 
     /* TOP / NICHE */
     .top {
-      padding: 90px 8% 60px;
+      padding: 100px 8% 70px;
       max-width: 1100px;
     }
 
     .top h1 {
-      font-size: 2.6rem;
+      font-size: 2.8rem;
       line-height: 1.2;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
+      font-weight: 700;
     }
 
     .top h1 span {
@@ -49,14 +51,15 @@
     }
 
     .top p {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: var(--text-muted);
-      max-width: 850px;
+      max-width: 880px;
     }
 
     /* ABOUT */
     .about {
       padding: 90px 8%;
+      background: var(--bg-soft);
     }
 
     .about-grid {
@@ -76,13 +79,14 @@
     .about-lead {
       font-size: 1.05rem;
       color: var(--accent);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+      font-weight: 500;
     }
 
     .about p {
       font-size: 1rem;
       color: var(--text-muted);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .services {
@@ -98,18 +102,19 @@
     .about-image img {
       width: 100%;
       max-width: 360px;
-      border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(15, 23, 42, 0.15);
     }
 
     /* BELIEFS */
     .beliefs {
       padding: 90px 8%;
-      background: rgba(255,255,255,0.04);
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
     }
 
     .belief-box {
-      max-width: 800px;
+      max-width: 820px;
       margin: auto;
     }
 
@@ -128,10 +133,11 @@
     .cta-connect {
       padding: 80px 8%;
       text-align: center;
+      background: var(--bg-soft);
     }
 
     .cta-connect .pointer {
-      font-size: 3.2rem;
+      font-size: 3rem;
       margin-bottom: 12px;
     }
 
@@ -147,16 +153,21 @@
       font-weight: 600;
     }
 
+    .cta-connect a:hover {
+      text-decoration: underline;
+    }
+
     /* FOOTER */
     .social-footer {
       background: var(--blue-footer);
-      padding: 40px 20px;
+      padding: 42px 20px;
       text-align: center;
     }
 
     .social-footer p {
       color: #dbeafe;
       margin-bottom: 14px;
+      font-size: 0.95rem;
     }
 
     .social-links a {
@@ -164,6 +175,10 @@
       margin: 0 14px;
       font-weight: 500;
       text-decoration: none;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
     }
 
     .social-footer span {
@@ -175,6 +190,10 @@
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
+      .top h1 {
+        font-size: 2.2rem;
+      }
+
       .about-grid {
         grid-template-columns: 1fr;
         text-align: center;
@@ -213,8 +232,8 @@
 
       <p>
         I work at the intersection of problem management, governance, analytics,
-        and delivery execution — turning fragmented, manual operations into
-        structured, visible, and reliable systems.
+        and delivery execution — helping organisations turn fragmented, manual
+        operations into structured, visible, and reliable systems.
       </p>
 
       <h3>What I Help Organisations With</h3>
@@ -245,16 +264,17 @@
     </p>
 
     <p>
-      That governance should increase confidence and speed, not slow teams down.
+      That governance should create confidence and momentum, not unnecessary
+      friction.
     </p>
 
     <p>
-      That reporting should create decisions, not just documentation.
+      That reporting should enable decisions, not just documentation.
     </p>
 
     <p>
-      And that sustainable scale comes from fixing how work flows — not asking
-      people to work harder.
+      And that sustainable scale comes from improving how work flows — not
+      asking people to work harder.
     </p>
   </div>
 </section>
@@ -262,7 +282,7 @@
 <!-- CONTACT CTA -->
 <section class="cta-connect">
   <div class="pointer">👉</div>
-  <p>If you want to strengthen operational clarity or service reliability</p>
+  <p>If you’d like to strengthen operational clarity or service reliability</p>
   <a href="mailto:jashminepandian07@gmail.com">
     jashminepandian07@gmail.com
   </a>
@@ -279,4 +299,3 @@
 
 </body>
 </html>
-
