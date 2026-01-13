@@ -10,6 +10,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* CTA pointer animation */
+.pointer {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  animation: floatDown 1.8s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes floatDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
     :root {
       --bg-main: #ffffff;
       --bg-soft: #f8fafc;
@@ -386,7 +406,7 @@
 
 <!-- CTA -->
 <section class="cta-connect" id="contact">
-  <div class="pointer">👉</div>
+  <div class="pointer">👇</div>
   <p>If you’d like to strengthen operational clarity or service reliability</p>
   <a href="mailto:jashminepandian07@gmail.com">jashminepandian07@gmail.com</a>
 </section>
@@ -415,3 +435,4 @@
 
 </body>
 </html>
+
