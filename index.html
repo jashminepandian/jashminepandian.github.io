@@ -4,43 +4,12 @@
   <meta charset="UTF-8" />
   <title>Jashmine | Digital Operations & AI Systems</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jashmine – AI-assisted internal systems, operational governance, and audit-ready execution." />
+  <meta name="description" content="AI-assisted internal systems, operational governance, audit-ready execution, and board-level insights." />
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* CTA pointer animation */
-.pointer {
-  font-size: 2.6rem;
-  margin-bottom: 10px;
-  animation: floatDown 1.8s ease-in-out infinite;
-}
-    <section class="cta-connect" id="contact">
-  <p>If you’d like to strengthen operational clarity or service reliability</p>
-
-  <a href="mailto:jashminepandian07@gmail.com">
-    jashminepandian07@gmail.com
-  </a>
-
-  <!-- Animated pointer BELOW -->
-  <div class="pointer">👇</div>
-</section>
-
-
-/* Keyframes */
-@keyframes floatDown {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(8px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
     :root {
       --bg-main: #ffffff;
       --bg-soft: #f8fafc;
@@ -86,6 +55,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      font-weight: 600;
     }
 
     .brand-mark {
@@ -100,13 +70,8 @@
       font-size: 14px;
     }
 
-    .brand-name {
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
     .nav a {
-      margin-left: 24px;
+      margin-left: 22px;
       text-decoration: none;
       font-size: 0.9rem;
       color: var(--text-muted);
@@ -123,7 +88,6 @@
     /* HERO */
     .top {
       max-width: 1100px;
-      padding-bottom: 40px;
     }
 
     .top h1 {
@@ -146,7 +110,6 @@
     /* ABOUT */
     .about {
       background: var(--bg-soft);
-      padding-top: 40px;
     }
 
     .about-grid {
@@ -161,7 +124,7 @@
     .about-lead {
       color: var(--accent);
       font-weight: 500;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .about p {
@@ -170,7 +133,7 @@
     }
 
     .services {
-      margin-top: 14px;
+      margin-top: 12px;
       padding-left: 18px;
     }
 
@@ -191,24 +154,19 @@
       border-top: 1px solid var(--border-light);
     }
 
-    .approach-box {
-      max-width: 900px;
-      margin: auto;
-    }
-
     .framework {
       display: grid;
-      gap: 16px;
-      margin-top: 24px;
+      gap: 14px;
+      margin-top: 20px;
     }
 
     .step {
-      padding: 20px;
+      padding: 18px;
       border: 1px solid var(--border-light);
       border-radius: 14px;
       background: var(--bg-soft);
       opacity: 0;
-      transform: translateY(14px);
+      transform: translateY(12px);
       transition: all 0.6s ease;
     }
 
@@ -217,28 +175,12 @@
       transform: translateY(0);
     }
 
-    .step h3 {
-      margin-bottom: 8px;
-      font-size: 1.05rem;
-    }
-
-    .step p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-
     /* HOBBIES */
-    .hobbies-box {
-      max-width: 820px;
-      margin: auto;
-    }
-
     .hobby-line {
-      font-size: 1.05rem;
       color: var(--text-muted);
-      margin-bottom: 18px;
+      margin-bottom: 14px;
       opacity: 0;
-      transform: translateY(12px);
+      transform: translateY(10px);
       transition: all 0.6s ease;
     }
 
@@ -247,37 +189,29 @@
       transform: translateY(0);
     }
 
-    /* BELIEFS */
-    .beliefs {
-      border-top: 1px solid var(--border-light);
-    }
-
-    .belief-box {
-      max-width: 820px;
-      margin: auto;
-    }
-
-    .belief-box p {
-      color: var(--text-muted);
-      margin-bottom: 14px;
-    }
-
     /* CTA */
     .cta-connect {
       background: var(--bg-soft);
       text-align: center;
-      padding: 50px 8%;
-    }
-
-    .cta-connect .pointer {
-      font-size: 2.6rem;
-      margin-bottom: 10px;
     }
 
     .cta-connect a {
       color: var(--accent);
       font-weight: 600;
       text-decoration: none;
+    }
+
+    /* POINTER ANIMATION */
+    .pointer {
+      font-size: 2.4rem;
+      margin-top: 8px;
+      animation: floatDown 1.8s ease-in-out infinite;
+    }
+
+    @keyframes floatDown {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+      100% { transform: translateY(0); }
     }
 
     /* FOOTER */
@@ -315,11 +249,12 @@
   <div class="header-inner">
     <div class="brand">
       <div class="brand-mark">◎</div>
-      <span class="brand-name">Jashmine</span>
+      <span>Jashmine</span>
     </div>
     <nav class="nav">
       <a href="#about">About</a>
-      <a href="#approach">Approach</a>
+      <a href="/blog/">Blog</a>
+      <a href="/podcast/">Podcast</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -328,10 +263,7 @@
 <!-- HERO -->
 <section class="top">
   <h1>I design and build <span>AI-assisted internal systems</span></h1>
-  <p>
-    that help organisations reduce operational risk, improve service visibility,
-    and achieve audit-ready execution.
-  </p>
+  <p>that help organisations reduce operational risk, improve service visibility, and achieve audit-ready execution.</p>
 </section>
 
 <!-- ABOUT -->
@@ -339,87 +271,37 @@
   <div class="about-grid">
     <div>
       <h2>About Me</h2>
-      <p class="about-lead">
-        I’m Jashmine, a Digital Operations & ITSM leader with 17+ years of experience across regulated and scale environments.
-      </p>
-      <p>
-        I work at the intersection of problem management, governance, analytics, and delivery execution —
-        helping organisations transform fragmented operations into structured, reliable systems.
-      </p>
-
-      <h3>What I Help Organisations With</h3>
+      <p class="about-lead">Digital Operations & ITSM leader with 17+ years of experience.</p>
+      <p>I help organisations turn fragmented operations into structured, reliable systems.</p>
       <ul class="services">
-        <li>AI-assisted internal systems & workflows</li>
-        <li>Problem management & root-cause governance</li>
-        <li>Operational reporting & service visibility</li>
-        <li>Risk reduction & audit readiness</li>
+        <li>AI-assisted workflows</li>
+        <li>Problem management & governance</li>
+        <li>Operational risk reduction</li>
+        <li>Audit readiness</li>
       </ul>
     </div>
-
     <div class="about-image">
-      <img src="images/profile-v2.jpg" alt="Jashmine leadership portrait" />
+      <img src="images/profile-v2.jpg" alt="Jashmine leadership portrait">
     </div>
   </div>
 </section>
 
 <!-- APPROACH -->
-<section class="approach" id="approach">
-  <div class="approach-box">
-    <h2>How I approach problems</h2>
-    <p>
-      My work follows a clear, structured method designed to bring clarity,
-      accountability, and long-term stability to operations.
-    </p>
-
-    <div class="framework">
-      <div class="step">
-        <h3>1. What went wrong?</h3>
-        <p>Identify the issue by analysing failures, gaps, and early warning signals.</p>
-      </div>
-
-      <div class="step">
-        <h3>2. Why did it go wrong?</h3>
-        <p>Understand underlying causes across people, process, technology, and governance.</p>
-      </div>
-
-      <div class="step">
-        <h3>3. How do we fix it?</h3>
-        <p>Define corrective actions and control measures that address the root cause.</p>
-      </div>
-
-      <div class="step">
-        <h3>4. How do we prevent it from happening again?</h3>
-        <p>Implement preventive controls, governance checks, and system-level improvements.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOBBIES -->
-<section class="hobbies">
-  <div class="hobbies-box">
-    <h2>Beyond work</h2>
-    <p class="hobby-line">I enjoy travelling, visiting historic monuments and museums, and exploring cultures.</p>
-    <p class="hobby-line">I love arts, handicrafts, drawing, painting, and creating pieces from sea shells.</p>
-    <p class="hobby-line">Music, singing, cooking, gardening, fashion exploration, and coin collecting bring me joy.</p>
-  </div>
-</section>
-
-<!-- BELIEFS -->
-<section class="beliefs">
-  <div class="belief-box">
-    <h2>What I believe</h2>
-    <p>Strong operations rely on clarity, ownership, and early visibility of issues.</p>
-    <p>Governance should build confidence, not friction.</p>
-    <p>Sustainable scale comes from improving systems — not overworking people.</p>
+<section class="approach">
+  <h2>How I approach problems</h2>
+  <div class="framework">
+    <div class="step"><strong>1. What went wrong?</strong></div>
+    <div class="step"><strong>2. Why did it go wrong?</strong></div>
+    <div class="step"><strong>3. How do we fix it?</strong></div>
+    <div class="step"><strong>4. How do we prevent recurrence?</strong></div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-connect" id="contact">
-  <div class="pointer">👇</div>
   <p>If you’d like to strengthen operational clarity or service reliability</p>
   <a href="mailto:jashminepandian07@gmail.com">jashminepandian07@gmail.com</a>
+  <div class="pointer">👇</div>
 </section>
 
 <!-- FOOTER -->
@@ -432,19 +314,12 @@
 </footer>
 
 <script>
-  const animatedItems = document.querySelectorAll('.step, .hobby-line');
+  const items = document.querySelectorAll('.step, .hobby-line');
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
+    entries.forEach(e => e.isIntersecting && e.target.classList.add('visible'));
   }, { threshold: 0.2 });
-
-  animatedItems.forEach(item => observer.observe(item));
+  items.forEach(i => observer.observe(i));
 </script>
 
 </body>
 </html>
-
-
