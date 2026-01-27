@@ -56,7 +56,7 @@
     }
 
     .nav a {
-      margin-left: 24px;
+      margin-left: 22px;
       text-decoration: none;
       font-size: 0.9rem;
       color: var(--text-muted);
@@ -169,41 +169,6 @@
       transform: translateY(0);
     }
 
-    /* HOBBIES */
-    .hobbies-box {
-      max-width: 820px;
-      margin: auto;
-    }
-
-    .hobby-line {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      margin-bottom: 18px;
-      opacity: 0;
-      transform: translateY(12px);
-      transition: all 0.6s ease;
-    }
-
-    .hobby-line.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* BELIEFS */
-    .beliefs {
-      border-top: 1px solid var(--border-light);
-    }
-
-    .belief-box {
-      max-width: 820px;
-      margin: auto;
-    }
-
-    .belief-box p {
-      color: var(--text-muted);
-      margin-bottom: 14px;
-    }
-
     /* CTA */
     .cta-connect {
       background: var(--bg-soft);
@@ -246,6 +211,11 @@
       color: #ffffff;
       margin: 0 14px;
       text-decoration: none;
+      font-weight: 500;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 900px) {
@@ -263,16 +233,20 @@
 
 <body>
 
+<!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
     <nav class="nav">
       <a href="#about">About</a>
       <a href="#approach">Approach</a>
+      <a href="https://jashminep.substack.com" target="_blank">Substack</a>
+      <a href="https://www.youtube.com/watch?v=w0Wzmleb4Yo&list=PLVxxxnqADe5arX4Pbnq2NpDlDZJDW7xKt" target="_blank">YouTube</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="top">
   <h1>I design and build <span>AI-assisted internal systems</span></h1>
   <p>
@@ -281,16 +255,17 @@
   </p>
 </section>
 
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-grid">
     <div>
       <h2>About Me</h2>
       <p class="about-lead">
-        I’m Jashmine, a Digital Operations & ITSM leader with 17+ years of experience across regulated and scale environments.
+        I’m Jashmine, a Digital Operations & ITSM leader with 17+ years of experience.
       </p>
       <p>
-        I work at the intersection of problem management, governance, analytics, and delivery execution —
-        helping organisations transform fragmented operations into structured, reliable systems.
+        I work across governance, analytics, and execution to build reliable,
+        audit-ready operational systems.
       </p>
 
       <h3>What I Help Organisations With</h3>
@@ -308,58 +283,25 @@
   </div>
 </section>
 
-<section class="approach" id="approach">
-  <div class="approach-box">
-    <h2>How I approach problems</h2>
-    <div class="framework">
-      <div class="step"><h3>1. What went wrong?</h3><p>Identify the issue.</p></div>
-      <div class="step"><h3>2. Why did it go wrong?</h3><p>Root-cause analysis.</p></div>
-      <div class="step"><h3>3. How do we fix it?</h3><p>Corrective actions.</p></div>
-      <div class="step"><h3>4. Prevent recurrence</h3><p>Governance controls.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="hobbies">
-  <div class="hobbies-box">
-    <h2>Beyond work</h2>
-    <p class="hobby-line">Travelling, culture, museums and history.</p>
-    <p class="hobby-line">Arts, handicrafts, painting and sea-shell creations.</p>
-    <p class="hobby-line">Music, cooking, gardening, fashion and coin collecting.</p>
-  </div>
-</section>
-
-<section class="beliefs">
-  <div class="belief-box">
-    <h2>What I believe</h2>
-    <p>Strong operations rely on clarity and ownership.</p>
-    <p>Governance should build confidence — not friction.</p>
-    <p>Sustainable scale comes from systems, not burnout.</p>
-  </div>
-</section>
-
+<!-- CTA -->
 <section class="cta-connect" id="contact">
   <div class="pointer">👇</div>
   <p>If you’d like to strengthen operational clarity or service reliability</p>
   <a href="mailto:jashminepandian07@gmail.com">jashminepandian07@gmail.com</a>
 </section>
 
+<!-- FOOTER -->
 <footer class="social-footer">
-  <p>© 2026 Jashmine</p>
+  <p>Connect with me</p>
+  <div class="social-links">
+    <a href="https://jashmine.in" target="_blank">Website</a>
+    <a href="https://www.linkedin.com/in/jashminep/" target="_blank">LinkedIn</a>
+    <a href="https://x.com/jash0704" target="_blank">Twitter / X</a>
+    <a href="https://jashminep.substack.com" target="_blank">Substack</a>
+    <a href="https://www.youtube.com/watch?v=w0Wzmleb4Yo&list=PLVxxxnqADe5arX4Pbnq2NpDlDZJDW7xKt" target="_blank">YouTube</a>
+  </div>
+  <span>© 2026 Jashmine</span>
 </footer>
-
-<script>
-  const animatedItems = document.querySelectorAll('.step, .hobby-line');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  animatedItems.forEach(item => observer.observe(item));
-</script>
 
 </body>
 </html>
