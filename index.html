@@ -10,7 +10,206 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    .nav { margin-left: auto; }
+    :root {
+      --bg-main: #ffffff;
+      --bg-soft: #f8fafc;
+      --accent: #22c55e;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border-light: #e5e7eb;
+      --blue-footer: #1d4ed8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    /* HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-main);
+      border-bottom: 1px solid var(--border-light);
+      padding: 16px 8%;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav {
+      margin-left: auto;
+    }
+
+    .nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .nav a:hover {
+      color: var(--text-main);
+    }
+
+    section {
+      padding: 60px 8%;
+    }
+
+    /* HERO */
+    .top {
+      max-width: 1100px;
+      padding-bottom: 40px;
+    }
+
+    .top h1 {
+      font-size: 2.8rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .top h1 span {
+      color: var(--accent);
+    }
+
+    .top p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 900px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--bg-soft);
+      padding-top: 40px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.7fr 0.7fr;
+      gap: 40px;
+      align-items: flex-start;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .about-lead {
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .about p {
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .services {
+      margin-top: 14px;
+      padding-left: 18px;
+    }
+
+    .services li {
+      margin-bottom: 8px;
+      color: var(--text-muted);
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
+    }
+
+    /* APPROACH */
+    .approach {
+      border-top: 1px solid var(--border-light);
+    }
+
+    .approach-box {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .framework {
+      display: grid;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .step {
+      padding: 20px;
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      background: var(--bg-soft);
+      opacity: 0;
+      transform: translateY(14px);
+      transition: all 0.6s ease;
+    }
+
+    .step.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* HOBBIES */
+    .hobbies-box {
+      max-width: 820px;
+      margin: auto;
+    }
+
+    .hobby-line {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: all 0.6s ease;
+    }
+
+    .hobby-line.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* BELIEFS */
+    .beliefs {
+      border-top: 1px solid var(--border-light);
+    }
+
+    .belief-box {
+      max-width: 820px;
+      margin: auto;
+    }
+
+    .belief-box p {
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    /* CTA */
+    .cta-connect {
+      background: var(--bg-soft);
+      text-align: center;
+      padding: 50px 8%;
+    }
 
     .pointer {
       font-size: 2.6rem;
@@ -24,81 +223,13 @@
       100% { transform: translateY(0); }
     }
 
-    :root {
-      --bg-main: #ffffff;
-      --bg-soft: #f8fafc;
-      --accent: #22c55e;
-      --text-main: #0f172a;
-      --text-muted: #475569;
-      --border-light: #e5e7eb;
-      --blue-footer: #1d4ed8;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-
-    body { background: var(--bg-main); color: var(--text-main); line-height: 1.6; }
-
-    .site-header {
-      position: sticky; top: 0; z-index: 100;
-      background: var(--bg-main);
-      border-bottom: 1px solid var(--border-light);
-      padding: 16px 8%;
-    }
-
-    .header-inner {
-      max-width: 1200px; margin: auto;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-
-    .nav a {
-      margin-left: 24px;
+    .cta-connect a {
+      color: var(--accent);
+      font-weight: 600;
       text-decoration: none;
-      font-size: 0.9rem;
-      color: var(--text-muted);
     }
 
-    .nav a:hover { color: var(--text-main); }
-
-    section { padding: 28px 8%; }
-
-    .top h1 { font-size: 2.8rem; margin-bottom: 12px; }
-    .top h1 span { color: var(--accent); }
-
-    .about { background: var(--bg-soft); }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 1fr;
-      gap: 60px;
-      max-width: 1200px;
-      margin: auto;
-      align-items: center;
-    }
-
-    .services { padding-left: 18px; }
-
-    .approach { border-top: 1px solid var(--border-light); }
-
-    .framework { display: grid; gap: 16px; margin-top: 24px; }
-
-    .step {
-      padding: 20px;
-      border: 1px solid var(--border-light);
-      border-radius: 14px;
-      background: var(--bg-soft);
-      opacity: 0;
-      transform: translateY(14px);
-      transition: all 0.6s ease;
-    }
-
-    .step.visible { opacity: 1; transform: translateY(0); }
-
-    .cta-connect {
-      background: var(--bg-soft);
-      text-align: center;
-      padding: 50px 8%;
-    }
-
+    /* FOOTER */
     .social-footer {
       background: var(--blue-footer);
       padding: 40px 20px;
@@ -106,68 +237,61 @@
     }
 
     .social-footer p,
-    .social-footer span { color: #dbeafe; font-size: 0.9rem; }
+    .social-footer span {
+      color: #dbeafe;
+      font-size: 0.9rem;
+    }
 
     .social-links a {
       color: #ffffff;
       margin: 0 14px;
       text-decoration: none;
-      font-weight: 500;
     }
 
-    .social-links a:hover { text-decoration: underline; }
-
     @media (max-width: 900px) {
-      .about-grid { grid-template-columns: 1fr; text-align: center; }
+      .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .about-image img {
+        margin: auto;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
     <nav class="nav">
       <a href="#about">About</a>
       <a href="#approach">Approach</a>
-      <a href="https://jashminep.substack.com" target="_blank">Substack</a>
-      <a href="https://www.youtube.com/watch?v=w0Wzmleb4Yo&list=PLVxxxnqADe5arX4Pbnq2NpDlDZJDW7xKt" target="_blank">YouTube</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<style>
-  /* Tighten hero → about spacing */
-  .top { padding-bottom: 20px; }
-  .top p { margin-bottom: 0; }
-
-  .about { padding-top: 24px; }
-
-  h2 { margin-bottom: 14px; }
-  p { margin-bottom: 10px; }
-
-  /* Small gap before sub-headings */
-  h3 { margin-top: 14px; margin-bottom: 10px; }
-</style>
-
-<!-- HERO -->
 <section class="top">
   <h1>I design and build <span>AI-assisted internal systems</span></h1>
-  <p>that help organisations reduce operational risk, improve service visibility, and achieve audit-ready execution.</p>
+  <p>
+    that help organisations reduce operational risk, improve service visibility,
+    and achieve audit-ready execution.
+  </p>
 </section>
 
-<!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-grid">
     <div>
       <h2>About Me</h2>
-      <p class="about-lead">I’m Jashmine, a Digital Operations & ITSM leader with 17+ years of experience.</p>
-      <p>I work across governance, analytics, and execution to build reliable systems.</p>
-
-      <!-- spacing handled via CSS -->
+      <p class="about-lead">
+        I’m Jashmine, a Digital Operations & ITSM leader with 17+ years of experience across regulated and scale environments.
+      </p>
+      <p>
+        I work at the intersection of problem management, governance, analytics, and delivery execution —
+        helping organisations transform fragmented operations into structured, reliable systems.
+      </p>
 
       <h3>What I Help Organisations With</h3>
       <ul class="services">
@@ -179,81 +303,58 @@
     </div>
 
     <div class="about-image">
-      <img src="images/profile-v2.jpg" alt="Jashmine portrait" />
+      <img src="images/profile-v2.jpg" alt="Jashmine leadership portrait" />
     </div>
   </div>
 </section>
 
-<!-- APPROACH -->
 <section class="approach" id="approach">
   <div class="approach-box">
     <h2>How I approach problems</h2>
     <div class="framework">
-      <div class="step"><h3>1. What went wrong?</h3><p>Identify failures and signals.</p></div>
+      <div class="step"><h3>1. What went wrong?</h3><p>Identify the issue.</p></div>
       <div class="step"><h3>2. Why did it go wrong?</h3><p>Root-cause analysis.</p></div>
       <div class="step"><h3>3. How do we fix it?</h3><p>Corrective actions.</p></div>
-      <div class="step"><h3>4. How do we prevent recurrence?</h3><p>Governance and controls.</p></div>
+      <div class="step"><h3>4. Prevent recurrence</h3><p>Governance controls.</p></div>
     </div>
   </div>
 </section>
 
-<!-- HOBBIES -->
-<style>
-  /* Reduce vertical spacing */
-  .hobbies, .beliefs { padding-top: 25px; padding-bottom: 25px; }
-
-  .hobbies-box h2,
-  .belief-box h2 { margin-bottom: 12px; }
-
-  .hobby-line,
-  .belief-box p { margin-bottom: 10px; }
-</style>
-
-<!-- HOBBIES -->
 <section class="hobbies">
   <div class="hobbies-box">
     <h2>Beyond work</h2>
-    <p class="hobby-line">I enjoy travelling, visiting historic monuments and museums, and exploring cultures.</p>
-    <p class="hobby-line">I love arts, handicrafts, drawing, painting, and creating pieces from sea shells.</p>
-    <p class="hobby-line">Music, singing, cooking, gardening, fashion exploration, and coin collecting bring me joy.</p>
+    <p class="hobby-line">Travelling, culture, museums and history.</p>
+    <p class="hobby-line">Arts, handicrafts, painting and sea-shell creations.</p>
+    <p class="hobby-line">Music, cooking, gardening, fashion and coin collecting.</p>
   </div>
 </section>
 
-<!-- BELIEFS -->
 <section class="beliefs">
   <div class="belief-box">
     <h2>What I believe</h2>
-    <p>Strong operations rely on clarity, ownership, and early visibility of issues.</p>
-    <p>Governance should build confidence, not friction.</p>
-    <p>Sustainable scale comes from improving systems — not overworking people.</p>
+    <p>Strong operations rely on clarity and ownership.</p>
+    <p>Governance should build confidence — not friction.</p>
+    <p>Sustainable scale comes from systems, not burnout.</p>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-connect" id="contact">
   <div class="pointer">👇</div>
   <p>If you’d like to strengthen operational clarity or service reliability</p>
   <a href="mailto:jashminepandian07@gmail.com">jashminepandian07@gmail.com</a>
 </section>
 
-<!-- FOOTER -->
 <footer class="social-footer">
-  <p>Connect with me</p>
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/jashminep/" target="_blank">LinkedIn</a>
-    <a href="https://x.com/jash0704" target="_blank">Twitter / X</a>
-    <a href="https://jashminep.substack.com" target="_blank">Substack</a>
-    <a href="https://www.youtube.com/watch?v=w0Wzmleb4Yo&list=PLVxxxnqADe5arX4Pbnq2NpDlDZJDW7xKt" target="_blank">YouTube</a>
-    <a href="https://jashmine.in" target="_blank">Website</a>
-  </div>
-  <span>© 2026 Jashmine</span>
+  <p>© 2026 Jashmine</p>
 </footer>
 
 <script>
-  const animatedItems = document.querySelectorAll('.step');
+  const animatedItems = document.querySelectorAll('.step, .hobby-line');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
     });
   }, { threshold: 0.2 });
 
