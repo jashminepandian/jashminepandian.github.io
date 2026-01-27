@@ -86,7 +86,7 @@ section { padding:60px 8%; }
 
 .about-grid {
   display:grid;
-  grid-template-columns: 1.2fr 1fr;   /* PHOTO PROMINENT */
+  grid-template-columns: 1.2fr 1fr;
   gap:60px;
   max-width:1200px;
   margin:auto;
@@ -104,11 +104,10 @@ section { padding:60px 8%; }
   margin-bottom:14px;
 }
 
-/* ⭐ PROMINENT PHOTO STYLE */
+/* PHOTO */
 .about-image img {
   width:100%;
-  max-width:420px;          /* LARGE IMAGE */
-  height:auto;
+  max-width:420px;
   border-radius:22px;
   box-shadow:0 25px 60px rgba(15,23,42,0.25);
 }
@@ -155,16 +154,29 @@ section { padding:60px 8%; }
   transform:translateY(0);
 }
 
-/* HOBBIES & BELIEFS */
-.hobbies-box,
-.belief-box {
-  max-width:820px;
-  margin:auto;
+/* BOOKING SECTION */
+.booking-section {
+  background:#ffffff;
+  padding:80px 8%;
+  border-top:1px solid var(--border-light);
 }
 
-.hobby-line {
+.booking-box {
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+.booking-box h2 {
   margin-bottom:14px;
+}
+
+.booking-box p {
+  margin-bottom:32px;
   color:var(--text-muted);
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 /* CTA */
@@ -233,6 +245,7 @@ section { padding:60px 8%; }
     <nav class="nav">
       <a href="#about">About</a>
       <a href="#approach">Approach</a>
+      <a href="#booking">Book</a>
       <a href="https://jashminep.substack.com" target="_blank">Substack</a>
       <a href="https://www.youtube.com/watch?v=w0Wzmleb4Yo&list=PLVxxxnqADe5arX4Pbnq2NpDlDZJDW7xKt" target="_blank">YouTube</a>
       <a href="#contact">Contact</a>
@@ -278,6 +291,28 @@ section { padding:60px 8%; }
     </div>
   </div>
 </section>
+
+<!-- BOOKING FORM -->
+<section class="booking-section" id="booking">
+  <div class="booking-box">
+    <h2>Book a conversation</h2>
+    <p>
+      Schedule a 30-minute discussion to explore digital operations,
+      governance, problem management, or advisory opportunities.
+    </p>
+
+    <div 
+      class="calendly-inline-widget"
+      data-url="https://calendly.com/jashminepandian07/30min"
+      style="min-width:320px;height:700px;">
+    </div>
+  </div>
+</section>
+
+<script 
+  src="https://assets.calendly.com/assets/external/widget.js" 
+  async>
+</script>
 
 <section class="cta-connect" id="contact">
   <div class="pointer">👇</div>
