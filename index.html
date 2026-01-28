@@ -32,7 +32,8 @@ body {
   line-height:1.65;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 .site-header {
   position:sticky;
   top:0;
@@ -46,11 +47,12 @@ body {
   max-width:1200px;
   margin:auto;
   display:flex;
+  align-items:center;
   justify-content:flex-end;
+  gap:28px;
 }
 
 .nav a {
-  margin-left:24px;
   text-decoration:none;
   font-size:0.9rem;
   color:var(--text-muted);
@@ -58,9 +60,20 @@ body {
 
 .nav a:hover { color:var(--text-main); }
 
-section { padding:60px 8%; }
+.book-btn {
+  background:var(--accent);
+  color:#fff !important;
+  padding:10px 18px;
+  border-radius:20px;
+  font-weight:600;
+}
 
-/* HERO */
+/* ================= SECTIONS ================= */
+
+section { padding:70px 8%; }
+
+/* ================= HERO ================= */
+
 .top {
   max-width:1100px;
 }
@@ -68,7 +81,7 @@ section { padding:60px 8%; }
 .top h1 {
   font-size:2.9rem;
   line-height:1.2;
-  margin-bottom:16px;
+  margin-bottom:18px;
 }
 
 .top span { color:var(--accent); }
@@ -79,14 +92,15 @@ section { padding:60px 8%; }
   max-width:900px;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
+
 .about {
   background:var(--bg-soft);
 }
 
 .about-grid {
   display:grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns:1.2fr 1fr;
   gap:60px;
   max-width:1200px;
   margin:auto;
@@ -104,15 +118,15 @@ section { padding:60px 8%; }
   margin-bottom:14px;
 }
 
-/* PHOTO */
 .about-image img {
   width:100%;
-  max-width:420px;
+  max-width:430px;
   border-radius:22px;
   box-shadow:0 25px 60px rgba(15,23,42,0.25);
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
+
 .services {
   margin-top:18px;
   padding-left:20px;
@@ -123,7 +137,8 @@ section { padding:60px 8%; }
   color:var(--text-muted);
 }
 
-/* APPROACH */
+/* ================= APPROACH ================= */
+
 .approach {
   border-top:1px solid var(--border-light);
 }
@@ -154,57 +169,69 @@ section { padding:60px 8%; }
   transform:translateY(0);
 }
 
-/* BOOKING SECTION */
+/* ================= BOOKING FORM ================= */
+
 .booking-section {
-  background:#ffffff;
-  padding:80px 8%;
-  border-top:1px solid var(--border-light);
+  background:linear-gradient(135deg,#f8fafc,#eef2ff);
 }
 
-.booking-box {
-  max-width:900px;
+.booking-container {
+  max-width:850px;
   margin:auto;
+  background:#fff;
+  border-radius:24px;
+  padding:55px;
+  box-shadow:0 25px 70px rgba(15,23,42,0.12);
+}
+
+.booking-container h2 {
   text-align:center;
-}
-
-.booking-box h2 {
-  margin-bottom:14px;
-}
-
-.booking-box p {
-  margin-bottom:32px;
-  color:var(--text-muted);
-  max-width:700px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-/* CTA */
-.cta-connect {
-  background:var(--bg-soft);
-  text-align:center;
-  padding:60px 8%;
-}
-
-.pointer {
-  font-size:2.6rem;
   margin-bottom:10px;
-  animation:floatDown 1.8s ease-in-out infinite;
 }
 
-@keyframes floatDown {
-  0%{transform:translateY(0)}
-  50%{transform:translateY(8px)}
-  100%{transform:translateY(0)}
+.booking-container p {
+  text-align:center;
+  color:var(--text-muted);
+  margin-bottom:35px;
 }
 
-.cta-connect a {
-  color:var(--accent);
+.booking-form {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+
+.booking-form input,
+.booking-form textarea {
+  width:100%;
+  padding:14px 16px;
+  border-radius:10px;
+  border:1px solid var(--border-light);
+  font-size:0.95rem;
+}
+
+.booking-form textarea {
+  grid-column:span 2;
+  height:120px;
+  resize:none;
+}
+
+.booking-form button {
+  grid-column:span 2;
+  padding:15px;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  border-radius:14px;
+  font-size:1rem;
   font-weight:600;
-  text-decoration:none;
+  cursor:pointer;
 }
 
-/* FOOTER */
+.booking-form button:hover { opacity:0.9; }
+
+/* ================= FOOTER ================= */
+
 .social-footer {
   background:var(--blue-footer);
   padding:45px 20px;
@@ -223,17 +250,14 @@ section { padding:60px 8%; }
   text-decoration:none;
 }
 
-/* MOBILE */
-@media (max-width:900px) {
-  .about-grid {
-    grid-template-columns:1fr;
-    text-align:center;
-  }
+/* ================= MOBILE ================= */
 
-  .about-image img {
-    margin:30px auto 0;
-    max-width:300px;
-  }
+@media(max-width:900px){
+  .about-grid { grid-template-columns:1fr; text-align:center; }
+  .about-image img { margin:30px auto 0; max-width:300px; }
+  .booking-form { grid-template-columns:1fr; }
+  .booking-form textarea,
+  .booking-form button { grid-column:span 1; }
 }
 </style>
 </head>
@@ -245,10 +269,9 @@ section { padding:60px 8%; }
     <nav class="nav">
       <a href="#about">About</a>
       <a href="#approach">Approach</a>
-      <a href="#booking">Book</a>
       <a href="https://jashminep.substack.com" target="_blank">Substack</a>
       <a href="https://www.youtube.com/watch?v=w0Wzmleb4Yo&list=PLVxxxnqADe5arX4Pbnq2NpDlDZJDW7xKt" target="_blank">YouTube</a>
-      <a href="#contact">Contact</a>
+      <a href="#booking" class="book-btn">Book Now</a>
     </nav>
   </div>
 </header>
@@ -262,15 +285,15 @@ section { padding:60px 8%; }
   <div class="about-grid">
     <div>
       <h2>About Me</h2>
-      <p class="about-lead">I’m Jashmine, a Digital Operations & ITSM leader with 17+ years of experience.</p>
-      <p>I work across governance, analytics, and execution to build reliable, audit-ready operational systems.</p>
+      <p class="about-lead">Digital Operations & ITSM Leader with 17+ years of experience.</p>
+      <p>I help organisations fix broken processes, strengthen governance, improve accountability, and prevent repeat failures.</p>
 
-      <h3>What I Help Organisations With</h3>
+      <h3>What I Help With</h3>
       <ul class="services">
-        <li>AI-assisted internal systems & workflows</li>
-        <li>Problem management & root-cause governance</li>
-        <li>Operational reporting & service visibility</li>
-        <li>Risk reduction & audit readiness</li>
+        <li>AI-assisted internal systems</li>
+        <li>Problem management governance</li>
+        <li>Operational analytics & dashboards</li>
+        <li>Audit readiness & reporting clarity</li>
       </ul>
     </div>
 
@@ -284,40 +307,31 @@ section { padding:60px 8%; }
   <div class="approach-box">
     <h2>How I approach problems</h2>
     <div class="framework">
-      <div class="step"><h3>1. What went wrong?</h3><p>Identify failures and signals.</p></div>
-      <div class="step"><h3>2. Why did it go wrong?</h3><p>Root-cause analysis.</p></div>
-      <div class="step"><h3>3. How do we fix it?</h3><p>Corrective actions.</p></div>
-      <div class="step"><h3>4. Prevent recurrence</h3><p>Governance controls.</p></div>
+      <div class="step"><h3>What went wrong?</h3><p>Identify failures and weak signals.</p></div>
+      <div class="step"><h3>Why did it happen?</h3><p>Root cause across people, process and tools.</p></div>
+      <div class="step"><h3>Fix the issue</h3><p>Corrective controls and ownership.</p></div>
+      <div class="step"><h3>Prevent recurrence</h3><p>Governance and system improvements.</p></div>
     </div>
   </div>
 </section>
 
 <!-- BOOKING FORM -->
 <section class="booking-section" id="booking">
-  <div class="booking-box">
-    <h2>Book a conversation</h2>
-    <p>
-      Schedule a 30-minute discussion to explore digital operations,
-      governance, problem management, or advisory opportunities.
-    </p>
+  <div class="booking-container">
+    <h2>Book a Consultation</h2>
+    <p>30-minute discussion on digital operations, governance or advisory support.</p>
 
-    <div 
-      class="calendly-inline-widget"
-      data-url="https://calendly.com/jashminepandian07/30min"
-      style="min-width:320px;height:700px;">
-    </div>
+    <form class="booking-form" onsubmit="redirectCalendly(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Contact Number">
+      <input type="text" placeholder="Organisation">
+      <input type="date" required>
+      <input type="text" placeholder="Location / Country">
+      <textarea placeholder="Brief requirement or topic"></textarea>
+      <button type="submit">Proceed to Calendar</button>
+    </form>
   </div>
-</section>
-
-<script 
-  src="https://assets.calendly.com/assets/external/widget.js" 
-  async>
-</script>
-
-<section class="cta-connect" id="contact">
-  <div class="pointer">👇</div>
-  <p>If you’d like to strengthen operational clarity or service reliability</p>
-  <a href="mailto:jashminepandian07@gmail.com">jashminepandian07@gmail.com</a>
 </section>
 
 <footer class="social-footer">
@@ -326,23 +340,24 @@ section { padding:60px 8%; }
     <a href="https://www.linkedin.com/in/jashminep/" target="_blank">LinkedIn</a>
     <a href="https://x.com/jash0704" target="_blank">Twitter / X</a>
     <a href="https://jashminep.substack.com" target="_blank">Substack</a>
-    <a href="https://www.youtube.com/watch?v=w0Wzmleb4Yo&list=PLVxxxnqADe5arX4Pbnq2NpDlDZJDW7xKt" target="_blank">YouTube</a>
     <a href="https://jashmine.in" target="_blank">Website</a>
   </div>
   <span>© 2026 Jashmine</span>
 </footer>
 
 <script>
-const animatedItems = document.querySelectorAll('.step');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+function redirectCalendly(e){
+  e.preventDefault();
+  window.open("https://calendly.com/jashminepandian07/30min","_blank");
+}
+
+const steps=document.querySelectorAll('.step');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) entry.target.classList.add('visible');
   });
 },{threshold:0.2});
-
-animatedItems.forEach(item => observer.observe(item));
+steps.forEach(s=>observer.observe(s));
 </script>
 
 </body>
